@@ -1,44 +1,44 @@
-"C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel\src\stm8l15x_clk.c"
+"C:\Users\Ievgenii\Documents\GitHub\UnirelSlaveDevice\src\stm8l15x_clk.c"
 -std=c99
 -ferror-limit=100
 -I
-C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel\..
+C:\Users\Ievgenii\Documents\GitHub\UnirelSlaveDevice\..
 -I
-C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel
+C:\Users\Ievgenii\Documents\GitHub\UnirelSlaveDevice
 -I
-C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel\inc
+C:\Users\Ievgenii\Documents\GitHub\UnirelSlaveDevice\inc
 -I
-C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel\src
+C:\Users\Ievgenii\Documents\GitHub\UnirelSlaveDevice\src
 -I
-C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel\Utilities\STM8_EVAL
+C:\Users\Ievgenii\Documents\GitHub\UnirelSlaveDevice\Utilities\STM8_EVAL
 -I
-C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel\Utilities\STM8_EVAL\STM8L1526_EVAL
+C:\Users\Ievgenii\Documents\GitHub\UnirelSlaveDevice\Utilities\STM8_EVAL\STM8L1526_EVAL
 -I
-C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel\Utilities\STM8_EVAL\Common
+C:\Users\Ievgenii\Documents\GitHub\UnirelSlaveDevice\Utilities\STM8_EVAL\Common
 -I
-C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel\Utilities\Misc
+C:\Users\Ievgenii\Documents\GitHub\UnirelSlaveDevice\Utilities\Misc
 -I
-C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.5\stm8\inc
+C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.0\stm8\inc
 -I
-C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.5\stm8\inc\c
+C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.0\stm8\inc\c
 -I
-C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8
+C:\Users\Ievgenii\Documents\GitHub
 -I
-C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel
+C:\Users\Ievgenii\Documents\GitHub\UnirelSlaveDevice
 -I
-C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel\inc
+C:\Users\Ievgenii\Documents\GitHub\UnirelSlaveDevice\inc
 -I
-C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel\src
+C:\Users\Ievgenii\Documents\GitHub\UnirelSlaveDevice\src
 -I
-C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel\Utilities\STM8_EVAL
+C:\Users\Ievgenii\Documents\GitHub\UnirelSlaveDevice\Utilities\STM8_EVAL
 -I
-C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel\Utilities\STM8_EVAL\STM8L1526_EVAL
+C:\Users\Ievgenii\Documents\GitHub\UnirelSlaveDevice\Utilities\STM8_EVAL\STM8L1526_EVAL
 -I
-C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel\Utilities\STM8_EVAL\Common
+C:\Users\Ievgenii\Documents\GitHub\UnirelSlaveDevice\Utilities\STM8_EVAL\Common
 -I
-C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel\Utilities\Misc
--DUSE_STM8L1526_EVAL=0
--DSTM8L15X_MD=0
+C:\Users\Ievgenii\Documents\GitHub\UnirelSlaveDevice\Utilities\Misc
+-DUSE_STM8L1526_EVAL=1
+-DSTM8L15X_MD=1
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0
@@ -48,7 +48,7 @@ C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel\Utilities\Misc
 -D__SIGNED_CHAR_MIN__=(-__SIGNED_CHAR_MAX__-1)
 -D__CHAR_ALIGN__=1
 -D__SHORT_SIZE__=2
--D__UNSIGNED_SHORT_MAX__=0xffff
+-D__UNSIGNED_SHORT_MAX__=0xffffU
 -D__SIGNED_SHORT_MAX__=32767
 -D__SIGNED_SHORT_MIN__=(-__SIGNED_SHORT_MAX__-1)
 -D__SHORT_ALIGN__=1
@@ -144,7 +144,7 @@ C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel\Utilities\Misc
 -D__NAN_HAS_HIGH_MANTISSA_BIT_SET__=0
 -D__SUBNORMAL_FLOATING_POINTS__=1
 -D__SIZE_T_TYPE__=unsigned short int
--D__SIZE_T_MAX__=0xffff
+-D__SIZE_T_MAX__=0xffffU
 -D__PTRDIFF_T_TYPE__=signed short int
 -D__PTRDIFF_T_MAX__=32767
 -D__PTRDIFF_T_MIN__=(-__PTRDIFF_T_MAX__-1)
@@ -152,14 +152,14 @@ C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel\Utilities\Misc
 -D__INTPTR_T_MAX__=32767
 -D__INTPTR_T_MIN__=(-__INTPTR_T_MAX__-1)
 -D__UINTPTR_T_TYPE__=unsigned short int
--D__UINTPTR_T_MAX__=0xffff
+-D__UINTPTR_T_MAX__=0xffffU
 -D__INTPTR_SIZE_PREFIX__="h"
 -D__JMP_BUF_ELEMENT_TYPE__=unsigned char
 -D__JMP_BUF_NUM_ELEMENTS__=29
 -D__TID__=0x3800
--D__VER__=140
--D__SUBVERSION__=1
--D__BUILD_NUMBER__=106
+-D__VER__=210
+-D__SUBVERSION__=4
+-D__BUILD_NUMBER__=157
 -D__IAR_SYSTEMS_ICC__=8
 -D__VA_STACK_DECREASING__=1
 -D__VA_STACK_ALIGN__=1
@@ -168,7 +168,7 @@ C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel\Utilities\Misc
 -D__BOOL_TYPE__=unsigned char
 -D__WCHAR_T_TYPE__=unsigned short int
 -D__WCHAR_T_SIZE__=2
--D__WCHAR_T_MAX__=0xffff
+-D__WCHAR_T_MAX__=0xffffU
 -D__DEF_PTR_MEM__=__near
 -D__CODE_MEM0__=__far_func
 -D__CODE_MEM0_POINTER_OK__=1
@@ -222,7 +222,7 @@ C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel\Utilities\Misc
 -D__DATA_MEM4__=__eeprom
 -D__DATA_MEM4_POINTER_OK__=1
 -D__DATA_MEM4_UNIQUE_POINTER__=1
--D__DATA_MEM4_VAR_OK__=0
+-D__DATA_MEM4_VAR_OK__=1
 -D__DATA_MEM4_INDEX_TYPE__=short
 -D__DATA_MEM4_SIZE_TYPE__=unsigned short
 -D__DATA_MEM4_INTPTR_TYPE__=short int
@@ -232,7 +232,6 @@ C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel\Utilities\Misc
 -D__HEAP_MEM0__=1
 -D__MULTIPLE_HEAPS__=0
 -D__DEF_HEAP_MEM__=__near
--D__C99_BOOL__=1
 -D__MULTIPLE_INHERITANCE__=1
 -D_RTSL_COMPARE_T=unsigned char
 -D__CODE_MODEL__=__MEDIUM_CODE_MODEL__
@@ -250,18 +249,21 @@ C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel\Utilities\Misc
 -D__HAS_WEAK__=1
 -D__HAS_LOCATED_DECLARATION__=1
 -D__HAS_LOCATED_WITH_INIT__=1
--D__IAR_COMPILERBASE__=593160
--D__DATE__="Feb 28 2015"
--D__TIME__="13:30:14"
+-D__IAR_COMPILERBASE__=594189
+-D_GOANNA=1
+-D__DATE__="Apr 29 2015"
+-D__TIME__="16:29:23"
 -D__STDC__=1
 -D__STDC_VERSION__=199901L
 -D__STDC_HOSTED__=1
+-D__STDC_NO_VLA__=1
+-D__STDC_NO_ATOMICS__=1
 -D__EDG_IA64_ABI=1
 -D__EDG_IA64_ABI_VARIANT_CTORS_AND_DTORS_RETURN_THIS=1
 -D__EDG_IA64_ABI_USE_INT_STATIC_INIT_GUARD=1
 -D__EDG_TYPE_TRAITS_ENABLED=1
 -D__EDG__=1
--D__EDG_VERSION__=403
+-D__EDG_VERSION__=409
 -D__EDG_SIZE_TYPE__=unsigned short
 -D__EDG_PTRDIFF_TYPE__=short
 -D__EDG_DELTA_TYPE=short
@@ -276,12 +278,10 @@ C:\Users\Ievgenii\Documents\IAR Embedded Workbench\stm8\UniRel\Utilities\Misc
 -D__EDG_BSD=0
 -D__EDG_SYSV=0
 -D__EDG_ANSIC=1
--D__EDG_CPP0X_IL_EXTENSIONS_SUPPORTED=1
--DUSE_STM8L1526_EVAL=1
--DSTM8L15X_MD=1
--D_DLIB_CONFIG_FILE_HEADER_NAME="C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.5\stm8\LIB\dlstm8mmn.h"
--D_DLIB_CONFIG_FILE_STRING="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 6.5\\stm8\\LIB\\dlstm8mmn.h"
--D__VERSION__="IAR C/C++ Compiler V1.40.1.50106 for STM8"
+-D__EDG_CPP11_IL_EXTENSIONS_SUPPORTED=1
+-D_DLIB_CONFIG_FILE_HEADER_NAME="C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.0\stm8\LIB\dlstm8mmn.h"
+-D_DLIB_CONFIG_FILE_STRING="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 7.0\\stm8\\LIB\\dlstm8mmn.h"
+-D__VERSION__="IAR C/C++ Compiler V2.10.4.157 for STM8"
 -D__CODE_MEMORY_LIST1__()=__CODE_MEM_HELPER1__(__code, 0 )
 -D__CODE_MEMORY_LIST2__(_P1)=__CODE_MEM_HELPER2__(__code, 0 ,  _P1 )
 -D__CODE_MEMORY_LIST3__(_P1, _P2)=__CODE_MEM_HELPER3__(__code, 0 ,  _P1 ,  _P2 )

@@ -48,7 +48,8 @@ RTC_InitTypeDef   RTC_InitStr;
 RTC_TimeTypeDef   RTC_TimeStr;
 RTC_AlarmTypeDef  RTC_AlarmStr;
 RTC_DateTypeDef  RTC_DateStr;
-
+/* Счетчик пинг запросов */
+unsigned int _ping_count = 0;
 /* Флаг сработавшего таймера */
 __IO bool AlarmOccurred = FALSE;
 /* Часы, минуты, секунды для отсчета */
@@ -120,7 +121,7 @@ void _getConfig_integr(char *answer);
 void _setConfig_integr(char *cmd);
 void _setMode(char *mode, char *state);
 void _setCurTime(char *time);
-
+void _getPing(char *answer);
 
 /* Private functions ---------------------------------------------------------*/
 /**
@@ -159,7 +160,7 @@ void UART_Config(void) {
   //Подаем тактирование на USART
   CLK_PeripheralClockConfig(CLK_Peripheral_USART1 ,ENABLE);
   //Инициализируем USART
-  USART_Init(USART1, (u32)115200,USART_WordLength_8b,USART_StopBits_1,
+  USART_Init(USART1, (u32)9600,USART_WordLength_8b,USART_StopBits_1,
              USART_Parity_No, (USART_Mode_TypeDef)(USART_Mode_Rx | USART_Mode_Tx));
   //Включаем прерывание на освобождение буфера передачи
   USART_ITConfig(USART1, USART_IT_TC, ENABLE);
@@ -644,10 +645,12 @@ void ProcessCommand(char *cmd) {
        } else if (strncmp(command, "trigreset", 9) == 0) {
           Trig_Reset();
           _getConfig(answer);
-       } else if (strncmp(command, "trigbroot", 7) == 0) {
+       } else if (strncmp(command, "trigbrute", 7) == 0) {
           Trig_Ready();
           Trig_Set();
           _getConfig(answer);
+       } else if (strncmp(command, "ping", 4) == 0) {
+          _getPing(answer);
        } else {
           sprintf(answer, "unknown command");
        }
@@ -739,6 +742,20 @@ void _getConfig(char *answer) {
   printf("TRIG RDY,SET : %s %s", (char*)(_trig_ready ? "READY" : "OFF"),
          (char*)(_trig_set ? "SET" : "OFF"));
   printf(prompt);
+}
+
+
+/**
+  * @brief  Возвращает номер пинг-запроса с меткой времени
+  * @param  {*char} ссылка на строку в которую будет сформирован отчет
+  * @retval None
+  */
+void _getPing(char *answer) {
+  char snum[10];
+  _ping_count++;
+  sprintf(snum, "%d", _ping_count);
+  printf(prompt);
+  sprintf(answer, "%s", snum);
 }
 
 /**
